@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INKSESSION TATTOO & PIERCING | Artists</title>
+    <meta name="description"
+        content="Custom tattoos and professional piercings in Málaga. Premium, dark, and minimal studio. Book your appointment via WhatsApp.">
+
+    <!-- Google Fonts: Outfit (Headings), Inter (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Sticky Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo" translate="no">INKSESSION<span>.</span></a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="artists.html">Artists</a>
+                <a href="portfolio.html" translate="no">Portfolio</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <a href="https://wa.me/34620125975?text=Hola,%20quiero%20informaci%C3%B3n%20para%20un%20tatuaje"
+                class="btn btn-primary nav-cta" target="_blank" rel="noopener">Book via WhatsApp</a>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                <i class="ph ph-list"></i>
+            </button>
+        </div>
+        <!-- Mobile Dropdown -->
+        <div class="mobile-nav">
+            <a href="index.html">Home</a>
+            <a href="artists.html">Artists</a>
+            <a href="portfolio.html" translate="no">Portfolio</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="https://wa.me/34620125975?text=Hola,%20quiero%20informaci%C3%B3n%20para%20un%20tatuaje"
+                class="btn btn-primary" target="_blank" rel="noopener">Book via WhatsApp</a>
+        </div>
+    </nav>
+
+    <!-- Artists Section -->
+    <section class="artists section-block bg-alt scroll-animate" id="artists" style="padding-top: 120px;">
+        <div class="container content-center">
+            <div class="section-header text-center">
+                <h2>Our Artists</h2>
+                <p>Masters of their craft.</p>
+            </div>
+            <div class="artists-grid">
+                <!-- Artist 1 -->
+                <div class="artist-card">
+                    <div class="artist-img-wrapper">
+                        <img src="assets/artist_alex.png"
+                            alt="Alex - Blackwork" loading="lazy">
+                    </div>
+                    <div class="artist-info">
+                        <h3>Alex</h3>
+                        <p class="specialty" translate="no">Blackwork</p>
+                    </div>
+                </div>
+                <!-- Artist 2 -->
+                <div class="artist-card">
+                    <div class="artist-img-wrapper">
+                        <img src="assets/artist_sofia.png"
+                            alt="Sofia - Fine Line" loading="lazy">
+                    </div>
+                    <div class="artist-info">
+                        <h3>Sofia</h3>
+                        <p class="specialty" translate="no">Fine Line</p>
+                    </div>
+                </div>
+                <!-- Artist 3 -->
+                <div class="artist-card">
+                    <div class="artist-img-wrapper">
+                        <img src="assets/artist_marcos.png"
+                            alt="Marcos - Realism" loading="lazy">
+                    </div>
+                    <div class="artist-info">
+                        <h3>Marcos</h3>
+                        <p class="specialty" translate="no">Realism</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <h2 translate="no">INKSESSION<span>.</span></h2>
+            </div>
+            <div class="footer-social">
+                <a href="#" aria-label="Instagram"><i class="ph-fill ph-instagram-logo"></i> @inksessiontattoo</a>
+            </div>
+            <div class="footer-copy">
+                &copy; <span id="year"></span> <span translate="no">INKSESSION TATTOO & BODY PIERCING</span>. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/34620125975?text=Hola,%20quiero%20informaci%C3%B3n%20para%20un%20tatuaje"
+        class="fab-whatsapp" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+        <i class="ph-fill ph-whatsapp-logo"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INKSESSION TATTOO & PIERCING | Portfolio</title>
+    <meta name="description"
+        content="Custom tattoos and professional piercings in Málaga. Premium, dark, and minimal studio. Book your appointment via WhatsApp.">
+
+    <!-- Google Fonts: Outfit (Headings), Inter (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Sticky Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo" translate="no">INKSESSION<span>.</span></a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="artists.html">Artists</a>
+                <a href="portfolio.html" translate="no">Portfolio</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <a href="https://wa.me/34620125975?text=Hola,%20quiero%20informaci%C3%B3n%20para%20un%20tatuaje"
+                class="btn btn-primary nav-cta" target="_blank" rel="noopener">Book via WhatsApp</a>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                <i class="ph ph-list"></i>
+            </button>
+        </div>
+        <!-- Mobile Dropdown -->
+        <div class="mobile-nav">
+            <a href="index.html">Home</a>
+            <a href="artists.html">Artists</a>
+            <a href="portfolio.html" translate="no">Portfolio</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="https://wa.me/34620125975?text=Hola,%20quiero%20informaci%C3%B3n%20para%20un%20tatuaje"
+                class="btn btn-primary" target="_blank" rel="noopener">Book via WhatsApp</a>
+        </div>
+    </nav>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio section-block scroll-animate" id="portfolio" style="padding-top: 120px;">
+        <div class="container content-center">
+            <div class="section-header text-center">
+                <h2 translate="no">Portfolio</h2>
+                <div class="portfolio-tags justify-center">
+                    <span class="tag active">All</span>
+                    <span class="tag" translate="no">Blackwork</span>
+                    <span class="tag" translate="no">Fine line</span>
+                    <span class="tag" translate="no">Realism</span>
+                    <span class="tag" translate="no">Cover-ups</span>
+                </div>
+            </div>
+
+            <div class="masonry-grid">
+                <div class="masonry-item">
+                    <img src="assets/portfolio_blackwork.png"
+                        alt="Blackwork Tattoo" loading="lazy">
+                    <div class="portfolio-overlay"><span translate="no">Blackwork</span></div>
+                </div>
+                <div class="masonry-item">
+                    <img src="assets/portfolio_realism.png"
+                        alt="Realism Tattoo" loading="lazy">
+                    <div class="portfolio-overlay"><span translate="no">Realism</span></div>
+                </div>
+                <div class="masonry-item">
+                    <img src="assets/portfolio_fineline.png"
+                        alt="Fine Line Tattoo" loading="lazy">
+                    <div class="portfolio-overlay"><span translate="no">Fine Line</span></div>
+                </div>
+                <div class="masonry-item">
+                    <img src="assets/portfolio_coverup.png"
+                        alt="Cover-up Tattoo" loading="lazy">
+                    <div class="portfolio-overlay"><span translate="no">Cover-ups</span></div>
+                </div>
+                <div class="masonry-item">
+                    <img src="assets/portfolio_detail_1.png"
+                        alt="Blackwork Details" loading="lazy">
+                    <div class="portfolio-overlay"><span translate="no">Blackwork</span></div>
+                </div>
+                <div class="masonry-item">
+                    <img src="assets/portfolio_detail_2.png"
+                        alt="Realism Portrait" loading="lazy">
+                    <div class="portfolio-overlay"><span translate="no">Realism</span></div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="https://wa.me/34620125975?text=Hola,%20quiero%20informaci%C3%B3n%20para%20un%20tatuaje"
+                    class="btn btn-primary" target="_blank" rel="noopener"><i class="ph-fill ph-whatsapp-logo"></i> Book via WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <h2 translate="no">INKSESSION<span>.</span></h2>
+            </div>
+            <div class="footer-social">
+                <a href="#" aria-label="Instagram"><i class="ph-fill ph-instagram-logo"></i> @inksessiontattoo</a>
+            </div>
+            <div class="footer-copy">
+                &copy; <span id="year"></span> <span translate="no">INKSESSION TATTOO & BODY PIERCING</span>. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/34620125975?text=Hola,%20quiero%20informaci%C3%B3n%20para%20un%20tatuaje"
+        class="fab-whatsapp" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+        <i class="ph-fill ph-whatsapp-logo"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
