@@ -69,34 +69,28 @@
             </div>
 
             <div class="masonry-grid">
-                <div class="masonry-item">
-                    <img src="assets/portfolio_blackwork.png"
-                        alt="Blackwork Tattoo" loading="lazy">
+                <div class="masonry-item" data-cat="blackwork">
+                    <img src="assets/portfolio_blackwork.png" alt="Blackwork Tattoo" loading="lazy">
                     <div class="portfolio-overlay"><span translate="no">Blackwork</span></div>
                 </div>
-                <div class="masonry-item">
-                    <img src="assets/portfolio_realism.png"
-                        alt="Realism Tattoo" loading="lazy">
+                <div class="masonry-item" data-cat="realism">
+                    <img src="assets/portfolio_realism.png" alt="Realism Tattoo" loading="lazy">
                     <div class="portfolio-overlay"><span translate="no">Realism</span></div>
                 </div>
-                <div class="masonry-item">
-                    <img src="assets/portfolio_fineline.png"
-                        alt="Fine Line Tattoo" loading="lazy">
+                <div class="masonry-item" data-cat="fine-line">
+                    <img src="assets/portfolio_fineline.png" alt="Fine Line Tattoo" loading="lazy">
                     <div class="portfolio-overlay"><span translate="no">Fine Line</span></div>
                 </div>
-                <div class="masonry-item">
-                    <img src="assets/portfolio_coverup.png"
-                        alt="Cover-up Tattoo" loading="lazy">
+                <div class="masonry-item" data-cat="cover-ups">
+                    <img src="assets/portfolio_coverup.png" alt="Cover-up Tattoo" loading="lazy">
                     <div class="portfolio-overlay"><span translate="no">Cover-ups</span></div>
                 </div>
-                <div class="masonry-item">
-                    <img src="assets/portfolio_detail_1.png"
-                        alt="Blackwork Details" loading="lazy">
+                <div class="masonry-item" data-cat="blackwork">
+                    <img src="assets/portfolio_detail_1.png" alt="Blackwork Details" loading="lazy">
                     <div class="portfolio-overlay"><span translate="no">Blackwork</span></div>
                 </div>
-                <div class="masonry-item">
-                    <img src="assets/portfolio_detail_2.png"
-                        alt="Realism Portrait" loading="lazy">
+                <div class="masonry-item" data-cat="realism">
+                    <img src="assets/portfolio_detail_2.png" alt="Realism Portrait" loading="lazy">
                     <div class="portfolio-overlay"><span translate="no">Realism</span></div>
                 </div>
             </div>
@@ -130,6 +124,43 @@
     </a>
 
     <script src="script.js"></script>
+    <script>
+      // Portfolio filter
+      const tags = document.querySelectorAll('.portfolio-tags .tag');
+      const items = document.querySelectorAll('.masonry-item');
+
+      const catMap = {
+        'all': 'all',
+        'blackwork': 'blackwork',
+        'fine line': 'fine-line',
+        'realism': 'realism',
+        'cover-ups': 'cover-ups'
+      };
+
+      tags.forEach(tag => {
+        tag.style.cursor = 'pointer';
+        tag.addEventListener('click', () => {
+          tags.forEach(t => t.classList.remove('active'));
+          tag.classList.add('active');
+
+          const filter = catMap[tag.textContent.trim().toLowerCase()] || 'all';
+
+          items.forEach(item => {
+            if (filter === 'all' || item.dataset.cat === filter) {
+              item.style.opacity = '0';
+              item.style.display = '';
+              setTimeout(() => { item.style.opacity = '1'; }, 10);
+            } else {
+              item.style.opacity = '0';
+              setTimeout(() => { item.style.display = 'none'; }, 300);
+            }
+            item.style.transition = 'opacity 0.3s ease';
+          });
+        });
+      });
+
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 
 </html>
