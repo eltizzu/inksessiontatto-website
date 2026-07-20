@@ -1,3 +1,30 @@
+/* --- Language Toggle --- */
+.lang-toggle {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: var(--text-muted);
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: var(--transition);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+.lang-toggle:hover {
+    border-color: var(--color-cta);
+    color: var(--color-cta);
+}
+.lang-toggle-mobile {
+    margin: 0.75rem auto 0;
+    display: block;
+    font-size: 0.75rem;
+    padding: 0.4rem 1rem;
+}
+
 /* --- CSS Variables & Design Tokens --- */
 :root {
     /* Colors */

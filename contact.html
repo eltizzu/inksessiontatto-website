@@ -28,14 +28,15 @@
         <div class="nav-container">
             <a href="index.html" class="logo" translate="no">INKSESSION<span>.</span></a>
             <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="artists.html">Artists</a>
+                <a href="index.html" data-i18n="nav-home">Home</a>
+                <a href="artists.html" data-i18n="nav-artists">Artists</a>
                 <a href="portfolio.html" translate="no">Portfolio</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
+                <a href="about.html" data-i18n="nav-about">About</a>
+                <a href="contact.html" data-i18n="nav-contact">Contact</a>
             </div>
+            <button class="lang-toggle" aria-label="Switch to Spanish">ES</button>
             <a href="https://wa.me/34620125975?text=Hola,%20quiero%20informaci%C3%B3n%20para%20un%20tatuaje"
-                class="btn btn-primary nav-cta" target="_blank" rel="noopener">Book a Consultation</a>
+                class="btn btn-primary nav-cta" target="_blank" rel="noopener" data-i18n="nav-cta">Book a Consultation</a>
 
             <!-- Mobile Menu Toggle -->
             <button class="mobile-menu-btn" aria-label="Toggle Menu">
@@ -44,13 +45,14 @@
         </div>
         <!-- Mobile Dropdown -->
         <div class="mobile-nav">
-            <a href="index.html">Home</a>
-            <a href="artists.html">Artists</a>
+            <a href="index.html" data-i18n="nav-home">Home</a>
+            <a href="artists.html" data-i18n="nav-artists">Artists</a>
             <a href="portfolio.html" translate="no">Portfolio</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
+            <a href="about.html" data-i18n="nav-about">About</a>
+            <a href="contact.html" data-i18n="nav-contact">Contact</a>
             <a href="https://wa.me/34620125975?text=Hola,%20quiero%20informaci%C3%B3n%20para%20un%20tatuaje"
-                class="btn btn-primary" target="_blank" rel="noopener">Book a Consultation</a>
+                class="btn btn-primary" target="_blank" rel="noopener" data-i18n="nav-cta">Book a Consultation</a>
+            <button class="lang-toggle lang-toggle-mobile" aria-label="Switch to Spanish">ES</button>
         </div>
     </nav>
 
@@ -61,46 +63,46 @@
             <div class="contact-grid">
                 <!-- Booking Info -->
                 <div class="booking-flow">
-                    <h2>Book Your Session</h2>
-                    <p>Booking with us is straightforward. Just follow the steps below.</p>
+                    <h2 data-i18n="contact-booking-title">Book Your Session</h2>
+                    <p data-i18n="contact-booking-sub">Booking with us is straightforward. Just follow the steps below.</p>
                     <div class="steps-wrapper-vertical">
                         <div class="step-vert">
                             <div class="step-num">1</div>
                             <div>
-                                <h4>Contact via WhatsApp</h4>
-                                <p class="text-sm">Reach out to us directly.</p>
+                                <h4 data-i18n="contact-step1-title">Contact via WhatsApp</h4>
+                                <p class="text-sm" data-i18n="contact-step1-desc">Reach out to us directly.</p>
                             </div>
                         </div>
                         <div class="step-vert">
                             <div class="step-num">2</div>
                             <div>
-                                <h4>Send Ideas & Ref</h4>
-                                <p class="text-sm">Share your design concepts.</p>
+                                <h4 data-i18n="contact-step2-title">Send Ideas & Ref</h4>
+                                <p class="text-sm" data-i18n="contact-step2-desc">Share your design concepts.</p>
                             </div>
                         </div>
                         <div class="step-vert">
                             <div class="step-num">3</div>
                             <div>
-                                <h4>Get Quote & Date</h4>
-                                <p class="text-sm">We'll set everything up for you.</p>
+                                <h4 data-i18n="contact-step3-title">Get Quote & Date</h4>
+                                <p class="text-sm" data-i18n="contact-step3-desc">We'll set everything up for you.</p>
                             </div>
                         </div>
                     </div>
                     <a href="https://wa.me/34620125975?text=Hola,%20quiero%20informaci%C3%B3n%20para%20un%20tatuaje"
                         class="btn btn-primary btn-large w-full mt-2" target="_blank" rel="noopener">
-                        <i class="ph-fill ph-whatsapp-logo"></i> Book a Consultation
+                        <i class="ph-fill ph-whatsapp-logo"></i> <span data-i18n="btn-consultation">Book a Consultation</span>
                     </a>
                 </div>
 
                 <!-- Location Info -->
                 <div class="contact-info">
-                    <h2>Find Us</h2>
-                    <p>Located in the heart of Málaga.</p>
+                    <h2 data-i18n="contact-find-title">Find Us</h2>
+                    <p data-i18n="contact-find-sub">Located in the heart of Málaga.</p>
 
                     <div class="info-block">
                         <i class="ph-fill ph-map-pin"></i>
                         <div>
-                            <h4>Address</h4>
+                            <h4 data-i18n="contact-address-label">Address</h4>
                             <p>C. Explanada de la Estación, 6<br>Distrito Centro<br>29002 Málaga, Spain</p>
                         </div>
                     </div>
@@ -108,17 +110,17 @@
                     <div class="info-block">
                         <i class="ph-fill ph-phone"></i>
                         <div>
-                            <h4>Contact</h4>
+                            <h4 data-i18n="contact-contact-label">Contact</h4>
                             <p>+34 620 12 59 75</p>
                         </div>
                     </div>
 
                     <div class="hours-block">
-                        <h4><i class="ph-fill ph-clock"></i> Opening Hours</h4>
+                        <h4><i class="ph-fill ph-clock"></i> <span data-i18n="contact-hours-label">Opening Hours</span></h4>
                         <ul class="hours-list">
-                            <li><span>Mon-Fri</span> <span>10:00 – 14:00 / 17:00 – 19:00</span></li>
-                            <li><span>Saturday</span> <span>11:00 – 14:00</span></li>
-                            <li class="closed"><span>Sunday</span> <span>Closed</span></li>
+                            <li><span data-i18n="contact-mon-fri">Mon-Fri</span> <span>10:00 – 14:00 / 17:00 – 19:00</span></li>
+                            <li><span data-i18n="contact-saturday">Saturday</span> <span>11:00 – 14:00</span></li>
+                            <li class="closed"><span data-i18n="contact-sunday">Sunday</span> <span data-i18n="contact-closed">Closed</span></li>
                         </ul>
                     </div>
                 </div>
@@ -137,7 +139,7 @@
                 <a href="#" aria-label="Instagram"><i class="ph-fill ph-instagram-logo"></i> @inksessiontattoo</a>
             </div>
             <div class="footer-copy">
-                &copy; <span id="year"></span> <span translate="no">INKSESSION TATTOO & BODY PIERCING</span>. All rights reserved.
+                &copy; <span id="year"></span> <span translate="no">INKSESSION TATTOO & BODY PIERCING</span>. <span data-i18n="footer-rights">All rights reserved.</span>
             </div>
         </div>
     </footer>

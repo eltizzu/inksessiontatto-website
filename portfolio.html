@@ -28,14 +28,15 @@
         <div class="nav-container">
             <a href="index.html" class="logo" translate="no">INKSESSION<span>.</span></a>
             <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="artists.html">Artists</a>
+                <a href="index.html" data-i18n="nav-home">Home</a>
+                <a href="artists.html" data-i18n="nav-artists">Artists</a>
                 <a href="portfolio.html" translate="no">Portfolio</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
+                <a href="about.html" data-i18n="nav-about">About</a>
+                <a href="contact.html" data-i18n="nav-contact">Contact</a>
             </div>
+            <button class="lang-toggle" aria-label="Switch to Spanish">ES</button>
             <a href="https://wa.me/34620125975?text=Hola,%20quiero%20informaci%C3%B3n%20para%20un%20tatuaje"
-                class="btn btn-primary nav-cta" target="_blank" rel="noopener">Book via WhatsApp</a>
+                class="btn btn-primary nav-cta" target="_blank" rel="noopener" data-i18n="nav-cta-portfolio">Book via WhatsApp</a>
 
             <!-- Mobile Menu Toggle -->
             <button class="mobile-menu-btn" aria-label="Toggle Menu">
@@ -44,13 +45,14 @@
         </div>
         <!-- Mobile Dropdown -->
         <div class="mobile-nav">
-            <a href="index.html">Home</a>
-            <a href="artists.html">Artists</a>
+            <a href="index.html" data-i18n="nav-home">Home</a>
+            <a href="artists.html" data-i18n="nav-artists">Artists</a>
             <a href="portfolio.html" translate="no">Portfolio</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
+            <a href="about.html" data-i18n="nav-about">About</a>
+            <a href="contact.html" data-i18n="nav-contact">Contact</a>
             <a href="https://wa.me/34620125975?text=Hola,%20quiero%20informaci%C3%B3n%20para%20un%20tatuaje"
-                class="btn btn-primary" target="_blank" rel="noopener">Book via WhatsApp</a>
+                class="btn btn-primary" target="_blank" rel="noopener" data-i18n="nav-cta-portfolio">Book via WhatsApp</a>
+            <button class="lang-toggle lang-toggle-mobile" aria-label="Switch to Spanish">ES</button>
         </div>
     </nav>
 
@@ -60,11 +62,11 @@
             <div class="section-header text-center">
                 <h2 translate="no">Portfolio</h2>
                 <div class="portfolio-tags justify-center">
-                    <span class="tag active">All</span>
-                    <span class="tag" translate="no">Blackwork</span>
-                    <span class="tag" translate="no">Fine line</span>
-                    <span class="tag" translate="no">Realism</span>
-                    <span class="tag" translate="no">Cover-ups</span>
+                    <span class="tag active" data-i18n="portfolio-filter-all" data-filter="all">All</span>
+                    <span class="tag" translate="no" data-filter="blackwork">Blackwork</span>
+                    <span class="tag" translate="no" data-filter="fine-line">Fine line</span>
+                    <span class="tag" translate="no" data-filter="realism">Realism</span>
+                    <span class="tag" translate="no" data-filter="cover-ups">Cover-ups</span>
                 </div>
             </div>
 
@@ -97,7 +99,7 @@
             
             <div class="text-center mt-4">
                 <a href="https://wa.me/34620125975?text=Hola,%20quiero%20informaci%C3%B3n%20para%20un%20tatuaje"
-                    class="btn btn-primary" target="_blank" rel="noopener"><i class="ph-fill ph-whatsapp-logo"></i> Book via WhatsApp</a>
+                    class="btn btn-primary" target="_blank" rel="noopener"><i class="ph-fill ph-whatsapp-logo"></i> <span data-i18n="btn-book-whatsapp">Book via WhatsApp</span></a>
             </div>
         </div>
     </section>
@@ -112,7 +114,7 @@
                 <a href="#" aria-label="Instagram"><i class="ph-fill ph-instagram-logo"></i> @inksessiontattoo</a>
             </div>
             <div class="footer-copy">
-                &copy; <span id="year"></span> <span translate="no">INKSESSION TATTOO & BODY PIERCING</span>. All rights reserved.
+                &copy; <span id="year"></span> <span translate="no">INKSESSION TATTOO & BODY PIERCING</span>. <span data-i18n="footer-rights">All rights reserved.</span>
             </div>
         </div>
     </footer>
@@ -129,21 +131,13 @@
       const tags = document.querySelectorAll('.portfolio-tags .tag');
       const items = document.querySelectorAll('.masonry-item');
 
-      const catMap = {
-        'all': 'all',
-        'blackwork': 'blackwork',
-        'fine line': 'fine-line',
-        'realism': 'realism',
-        'cover-ups': 'cover-ups'
-      };
-
       tags.forEach(tag => {
         tag.style.cursor = 'pointer';
         tag.addEventListener('click', () => {
           tags.forEach(t => t.classList.remove('active'));
           tag.classList.add('active');
 
-          const filter = catMap[tag.textContent.trim().toLowerCase()] || 'all';
+          const filter = tag.dataset.filter || 'all';
 
           items.forEach(item => {
             if (filter === 'all' || item.dataset.cat === filter) {
